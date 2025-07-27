@@ -36,14 +36,14 @@ jobs:
    needs: build
    environment:
     name: production
-    url: http://intelligent-father.surge.sh
+    url: http://alcoholic-owner.surge.sh
    steps:
     - name: Download the Build Artifact
       uses: actions/download-artifact@v4.1.2
       with:
        name: build
     - name: deploy to surge
-      run: npx surge --project ‘.’ --domain intelligent-father.surge.sh
+      run: npx surge --project ‘.’ --domain alcoholic-owner.surge.sh
       env:
        SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
        SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
